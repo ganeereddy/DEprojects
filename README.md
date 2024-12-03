@@ -3,9 +3,6 @@
 * This repo contains projects done which applies principles in data engineering. 
 * Notes taken during the course can be found in folder `0. Back to Basics`
 
-
-
-
 ## Projects
 ---
 1. <ins> Postgres ETL </ins> :heavy_check_mark:
