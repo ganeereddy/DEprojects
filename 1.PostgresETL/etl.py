@@ -6,7 +6,7 @@ from sql_queries import *
 
 
 def process_song_file(cur, filepath):
-     """
+    """
     - Load data from a song file to the song and artist data tables
     """
     # open song file
@@ -18,12 +18,12 @@ def process_song_file(cur, filepath):
     
     # insert artist record
     artist_data = list(df[['artist_id', 'artist_name', 'artist_location',
-                       'artist_latitude', 'artist_longitude']].values[0])
+                           'artist_latitude', 'artist_longitude']].values[0])
     cur.execute(artist_table_insert, artist_data)
 
 
 def process_log_file(cur, filepath):
-     """
+    """
     - Load data from a log file to the time, user and songplay data tables
     """
     # open log file
@@ -97,7 +97,7 @@ def main():
     
     - Runs ETL pipelines
     """
-    conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=student password=student")
+    conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=postgres password=new_password")
     cur = conn.cursor()
 
     process_data(cur, conn, filepath='data/song_data', func=process_song_file)
